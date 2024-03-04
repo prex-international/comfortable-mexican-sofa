@@ -6,7 +6,7 @@ class Comfy::Cms::Fragment < ActiveRecord::Base
 
   has_many_attached :attachments
 
-  serialize :content
+  serialize :content, coder: YAML
 
   attr_reader :files
 
